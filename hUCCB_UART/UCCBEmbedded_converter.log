@@ -1,6 +1,6 @@
 Project: UCCBEmbedded
 Converter: Atollic TrueSTUDIO project converter
-Date: 20220801
+Date: 20220729
 
 Warning: MCU STM32F042C6 matched multiple possible MCUs: [STM32F042C6Tx, STM32F042C6Ux]
 Unknown value type "" for id com.atollic.truestudio.as.general.incpath on tool com.atollic.truestudio.exe.debug.toolchain.as
