@@ -22,5 +22,5 @@ Open the project by double clicking on .project file.
 
 ### Using CubeProgrammer or STLink Utility
 
-It is possible to flash raw binaries using[CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) or 
+It is possible to flash raw binaries using [CubeProgrammer](https://www.st.com/en/development-tools/stm32cubeprog.html) or 
 [ST-Link Utility](https://www.st.com/en/development-tools/stsw-link004.html).
