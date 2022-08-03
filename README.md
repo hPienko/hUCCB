@@ -7,7 +7,7 @@ to increase reliability.
 
 The software is written with **STM32CubeIDE** and is based on **HAL** libraries to make the code easier to write and understand. 
 
-The main goal was to reenable the UART and make at least as reliable as USB. It's done by utilizing DMA on both transmitting and receiving 
+The main goal was to reenable the UART and make at least as reliable as USB. It's done by utilizing DMA on both transmition and reception of 
 UART data, so the MCU is only busy with translating CAN frames to serial output and vice versa
 
 ## Programming the MCU
