@@ -166,6 +166,7 @@ int main(void)
   USART2->CR2 |= (uint32_t)(0x0D << USART_CR2_ADD_Pos);
   USART2->CR1 |= USART_CR1_CMIE;
   USART2->CR1 &= ~USART_CR1_RXNEIE;
+  HAL_Delay(1);
   USART2->CR1 |= USART_CR1_UE;
 
 // start DMA
@@ -361,7 +362,7 @@ void HAL_CAN_RxCpltCallback(CAN_HandleTypeDef* hcan)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef * huart)
 {
-	slCanProccesInput((const char*)&uart_rxBuffer); //decode buffer content
+	slCanProccesInputUART((const char*)&uart_rxBuffer); //decode buffer content
 	memset(uart_rxBuffer, 0 , UART_RX_BUFFER_SIZE); //clear the buffer
 	HAL_UART_Receive_DMA(huart, uart_rxBuffer, UART_RX_BUFFER_SIZE); //resume DMA
 	__HAL_UART_FLUSH_DRREGISTER(huart); //clear the register

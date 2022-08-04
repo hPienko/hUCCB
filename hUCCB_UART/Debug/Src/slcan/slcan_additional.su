@@ -1,0 +1,5 @@
+../Src/slcan/slcan_additional.c:15:19:CANInit	16	static
+../Src/slcan/slcan_additional.c:24:19:slcanClearAllFilters	48	static
+../Src/slcan/slcan_additional.c:44:12:slcanFillIdRegister32	16	static
+../Src/slcan/slcan_additional.c:64:12:slcanFillIdRegister16	24	static
+../Src/slcan/slcan_additional.c:91:6:slcanSetCANBaudRate	8	static

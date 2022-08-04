@@ -101,27 +101,29 @@ void slcanOutputFlush(void)
   * @retval None
   */
 uint8_t command[LINE_MAXLEN] = {0};
-
-int slCanProccesInput(const char* string)
+int slCanProccesInputUART(const char* string)
 {
 	//process string
 	memset(command, 0, sizeof(command));
 	memcpy(command,string,strlen(string));
-
+	return 0;
+}
+int slCanProccesInput(uint8_t ch)
+{
 	//process single character
-//	static uint8_t line[LINE_MAXLEN];
-//	static uint8_t linepos = 0;
-//
-//    if (ch == SLCAN_CR) {
-//        line[linepos] = 0;
-//        memcpy(command,line,linepos);
-//
-//        linepos = 0;
-//        return 1;
-//    } else if (ch != SLCAN_LR) {
-//        line[linepos] = ch;
-//        if (linepos < LINE_MAXLEN - 1) linepos++;
-//    }
+	static uint8_t line[LINE_MAXLEN];
+	static uint8_t linepos = 0;
+
+    if (ch == SLCAN_CR) {
+        line[linepos] = 0;
+        memcpy(command,line,linepos);
+
+        linepos = 0;
+        return 1;
+    } else if (ch != SLCAN_LR) {
+        line[linepos] = ch;
+        if (linepos < LINE_MAXLEN - 1) linepos++;
+    }
     return 0;
 }
 
