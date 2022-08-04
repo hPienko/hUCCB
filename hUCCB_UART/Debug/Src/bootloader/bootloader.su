@@ -1,2 +1,0 @@
-../Src/bootloader/bootloader.c:10:6:RebootToBootloader	32	static
-../Src/bootloader/bootloader.c:35:6:bootloaderSwitcher	32	static
