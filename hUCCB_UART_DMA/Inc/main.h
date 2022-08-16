@@ -59,8 +59,8 @@
 
 /* Private define ------------------------------------------------------------*/
 
-#define CAN_MOD_Pin GPIO_PIN_0
-#define CAN_MOD_GPIO_Port GPIOF
+#define CAN_MOD_Pin GPIO_PIN_4
+#define CAN_MOD_GPIO_Port GPIOB
 
 /* ########################## Assert Selection ############################## */
 /**

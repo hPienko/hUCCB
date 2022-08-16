@@ -36,15 +36,14 @@
 #include "stm32f0xx_it.h"
 
 /* USER CODE BEGIN 0 */
-
+extern IWDG_HandleTypeDef hiwdg;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
 extern PCD_HandleTypeDef hpcd_USB_FS;
 extern DMA_HandleTypeDef hdma_usart2_tx;
 extern DMA_HandleTypeDef hdma_usart2_rx;
-extern IWDG_HandleTypeDef hiwdg;
-extern uint8_t Uart2RxFifo[10];
+
 /******************************************************************************/
 /*            Cortex-M0 Processor Interruption and Exception Handlers         */
 /******************************************************************************/
